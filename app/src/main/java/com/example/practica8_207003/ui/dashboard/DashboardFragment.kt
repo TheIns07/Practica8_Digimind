@@ -37,9 +37,6 @@ class DashboardFragment : Fragment() {
         dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
 
 
-
-
-
         })
         return root
     }

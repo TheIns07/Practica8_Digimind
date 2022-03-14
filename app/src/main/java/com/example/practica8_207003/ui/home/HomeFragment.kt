@@ -2,6 +2,7 @@ package com.example.practica8_207003.ui.home
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -18,14 +19,9 @@ import com.example.practica8_207003.databinding.FragmentHomeBinding
 import android.widget.ArrayAdapter
 import android.widget.BaseAdapter
 import android.widget.Toast
+import androidx.annotation.DrawableRes
 
 import com.example.practica8_207003.MainActivity
-
-
-
-
-
-
 
 class HomeFragment : Fragment() {
 
@@ -46,12 +42,13 @@ class HomeFragment : Fragment() {
         homeViewModel =
             ViewModelProvider(this).get(HomeViewModel::class.java)
 
+
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
         val carrito: Carrito
         homeViewModel.text.observe(viewLifecycleOwner, Observer {
 
-
+            binding.gridview.adapter
 
         })
         return root
